@@ -3,9 +3,9 @@ import { HeartIcon } from "@heroicons/react/outline"
 import { StarIcon } from "@heroicons/react/solid"
 function SearchCard({ img, title, description, location, star, price, total}) {
     return (
-        <div className="flex py-7 px-2 pr-4 transition transform duration-200  ease-out border-b cursor-pointer hover:opacity-80 hover:shadow-lg first:border-t">
+        <div className="flex py-7 px-2 pr-4 transition transform duration-200  ease-out border-b cursor-pointer hover:opacity-80 hover:shadow-lg first:border-t group hover:border-r-4 ">
             {/* Read up on flex shrink */}
-            <div className="relative  h-24 w-40  md:h-52 md:w-80   flex-shrink-0 rounded-2xl ">
+            <div className="relative  h-24 w-40  md:h-52 md:w-80  flex-shrink-0 rounded-2xl ">
                 <Image 
                 src={img} 
                 layout="fill"

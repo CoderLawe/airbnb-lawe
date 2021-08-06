@@ -71,7 +71,7 @@ function Header({ placeholder }) {
     
 
     return (
-        <header className={ navbar ? "sticky top-0 z-50 grid grid-cols-3 p-5 md:px-10  bg-white shadow-md" : "sticky top-0 z-50 grid grid-cols-3 p-5 md:px-10  bg-black bg-opacity-50 text-gray-300 shadow-md" }>
+        <header className={ navbar ? "sticky top-0 z-50 grid grid-cols-3 p-5 md:px-10  bg-white shadow-md" : "sticky top-0 z-50 grid grid-cols-3 p-5 md:px-10  bg-black bg-opacity-60 text-gray-300 shadow-md" }>
             {/* Left */}
             <div onClick={() => router.push('/')}className="relative flex items-center h-10 cursor-pointer p-5">
                 <Image
@@ -115,9 +115,9 @@ function Header({ placeholder }) {
                 <input type="number" value ={numberOfGuests} min={1} onChange = {(e) => setNumberOfGuests(e.target.value)}className="w-12 pl-2 text-lg outline-none text-red-400"/>
             </div>
 
-            <div className="flex bg-gray-700 bg-opacity-60">
-                <button onChange={resetInput} className="cursor-pointer flex-grow text-gray-700 bg-red-400">Cancel</button>
-                <button onClick={search} className="flex-grow text-black bg-green-400">Search</button>
+            <div className="flex space-x-2  bg-opacity-60 ">
+                <button onChange={resetInput} className="rounded-2xl cursor-pointer flex-grow text-gray-700 bg-red-400 ">Cancel</button>
+                <button onClick={search} className="flex-grow text-black bg-green-400 rounded-2xl">Search</button>
             </div>
         </div>
     )}
