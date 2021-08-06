@@ -18,7 +18,7 @@ export default function Home({ exploreData, cardData }) {
     <Banner className=""/>
     <main className="max-w-7xl mx-auto px-8 sm:px-16">
       {/* Snall cards */}
-      <section className="pt-6">
+      <section className="pt-6 shadow-lg rounded-2xl p-10">
         <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2>
 
         {/* Pulling data from a server */}
@@ -30,7 +30,7 @@ export default function Home({ exploreData, cardData }) {
        
       </section>
 
-      <section>
+      <section className="shadow-lg rounded-2xl p-10">
         <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
       <div className="flex space-x-3 overflow-x-scroll scrollbar-hide p-3 -ml-3">
         {cardData?.map(({img, title}) =>(

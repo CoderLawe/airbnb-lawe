@@ -86,14 +86,14 @@ function Header({ placeholder }) {
             <div className="md:border rounded-2xl flex items-center md:shadow-sm">
                 <input className="flex-grow bg-transparent p-2 ml-5 focus:outline-none" value={searchInput} onChange ={(e) => setSearchInput(e.target.value)} type="text" placeholder={ placeholder || "Start your Search"} />
                 
-                <SearchCircleIcon className="text-red-400 h-8 ml-32 cursor-pointer hidden md:inline-flex mr-2"/>
+                <SearchCircleIcon className={navbar ? "text-red-400 h-8 ml-32 cursor-pointer hidden md:inline-flex mr-2" : "text-white h-8 ml-32 cursor-pointer hidden md:inline-flex mr-2 animate-pulse"}/>
             </div>
             {/* Right */}
             <div className="flex space-x-4 items-center justify-end text-gray500">
             <p className="hidden md:inline ml-2 cursor-pointer">Become a host</p>
             <GlobeAltIcon className="h-6 cursor-pointer"/>
 
-            <div className="flex border rounded-2xl p-3 text-gray-700 space-x-2 cursor-pointer">
+            <div className={ navbar ? "flex border rounded-2xl p-3 text-gray-700 space-x-2 cursor-pointer":"flex border rounded-2xl p-3 text-white space-x-2 cursor-pointer"}>
                 <MenuIcon className="h-6"/>
                 <UserIcon className="h-6"/>
             </div>
