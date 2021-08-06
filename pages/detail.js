@@ -1,5 +1,5 @@
 import { StarIcon, UploadIcon, SparklesIco, CheckIcon } from "@heroicons/react/solid"
-import { HomeIcon, SparklesIcon,EmojiHappyIcon } from "@heroicons/react/outline"
+import { HomeIcon, SparklesIcon,EmojiHappyIcon, HeartIcon } from "@heroicons/react/outline"
 import Header from "../components/Header"
 import Image from "next/image"
 
@@ -10,7 +10,7 @@ function detail() {
         <div className="mx-6 rounded-2xl shadow-lg mt-10 p-5">
             {/* Top section */}
             <div className="py-3">
-                <h3 className="text-2xl font-serif text-gray-700 font-bold">TAPENDOI LODGE, NANYUKI KENYA</h3>
+                <h3 className="text-2xl font-serif text-gray-700 font-bold py-3">TAPENDOI LODGE, NANYUKI KENYA</h3>
 
                 <div className="flex justify-between">
                     <div className="flex space-x-3">
@@ -33,8 +33,8 @@ function detail() {
                     </div>
 
                 <div className="flex space-x-2 items-center text-sm">
-                    <UploadIcon className="h-4"/>
-                        <p>Share</p>
+                    <HeartIcon className="h-4"/>
+                        <p>Save</p>
                 </div>
 
 
@@ -67,7 +67,7 @@ function detail() {
                             </div>
 
                             <div className="relative w-1/2 h-64 py-4">
-                                <Image className="rounded-r-2xl" src="https://cdn.pixabay.com/photo/2019/03/02/19/50/log-cabin-4030556_960_720.jpg" layout="fill"/>
+                                <Image className="rounded-r-2xl" src="https://cdn.pixabay.com/photo/2017/02/05/19/41/rustic-2041017_960_720.jpg" layout="fill"/>
                             </div>
 
                         </div>
@@ -78,7 +78,7 @@ function detail() {
                         <div className="flex space-x-2">
 
                             <div className="relative w-1/2 h-64 py-4">
-                                <Image  src="https://cdn.pixabay.com/photo/2019/03/02/19/50/log-cabin-4030556_960_720.jpg" layout="fill"/>
+                                <Image  src="https://cdn.pixabay.com/photo/2017/04/19/23/39/hdr-2244067_960_720.jpg" layout="fill"/>
                             </div>
 
                             <div className="relative w-1/2 h-64 py-4">

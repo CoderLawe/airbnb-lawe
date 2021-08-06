@@ -43,7 +43,7 @@ function SearchCard({ img, title, description, location, star, price, total}) {
 
                 <div className="flex justify-center items-start">
                     <Link href="/detail">
-                        <button className="rounded-full text-purple-500 bg-white px-10 py-4 shadow-md font-bold my-3 hover:shadow-xl transform transition duration-200 active:scale-90">More details</button>
+                        <button className="rounded-lg bg-red-400 text-white  px-10 py-4 shadow-md font-bold my-3 hover:shadow-xl transform transition duration-200 active:scale-90">More details</button>
                     </Link>
 
                 </div>
