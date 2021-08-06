@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { SearchIcon, SearchCircleIcon, GlobeIcon, GlobeAltIcon, UserIcon, MenuAlt1Icon, MenuIcon, UsersIcon } from "@heroicons/react/solid"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRangePicker } from 'react-date-range';
@@ -8,6 +8,20 @@ import { useRouter } from "next/dist/client/router";
 
 
 function Header({ placeholder }) {
+
+
+    const [navbar, setNavbar] = useState(false);
+
+    const changeBackground = () =>{
+        if(window.scrollY >= 80){
+          setNavbar(true);
+        }else{
+          setNavbar(false);
+        }
+    }
+  
+    // window.addEventListener('scroll', changeBackground);
+
     const [searchInput, setSearchInput] = useState('');
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
@@ -42,10 +56,22 @@ function Header({ placeholder }) {
         key:'selection'
     }
 
+
+    useEffect(function mount() {
+        function onScroll() {
+          console.log("scroll!");
+        }
+    
+        window.addEventListener('scroll', changeBackground);
+    
+        return function unMount() {
+          window.removeEventListener("scroll", changeBackground);
+        };
+      });
     
 
     return (
-        <header className="sticky top-0 z-50 grid grid-cols-3 p-5 md:px-10  bg-white shadow-md">
+        <header className={ navbar ? "sticky top-0 z-50 grid grid-cols-3 p-5 md:px-10  bg-white shadow-md" : "sticky top-0 z-50 grid grid-cols-3 p-5 md:px-10  bg-black bg-opacity-50 text-gray-300 shadow-md" }>
             {/* Left */}
             <div onClick={() => router.push('/')}className="relative flex items-center h-10 cursor-pointer p-5">
                 <Image

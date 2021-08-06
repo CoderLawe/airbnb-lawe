@@ -13,7 +13,7 @@ function Search({ searchResults}) {
     const formattedEndDate = format( new Date(startDate), "dd MMMM yy")
     const range = `${formattedStartDate} - ${formattedEndDate}`
 
-
+   
     return (
         <div>
             <Header placeholder={`${location} |${range} |${numberOfGuests}}`}/>

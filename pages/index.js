@@ -14,9 +14,8 @@ export default function Home({ exploreData, cardData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-    <Header />
       {/* Banner */}
-    <Banner />
+    <Banner className=""/>
     <main className="max-w-7xl mx-auto px-8 sm:px-16">
       {/* Snall cards */}
       <section className="pt-6">
@@ -71,5 +70,6 @@ export async function getStaticProps(){
     }
   }
 
-
 }
+
+
