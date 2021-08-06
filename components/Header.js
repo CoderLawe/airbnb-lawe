@@ -108,15 +108,15 @@ function Header({ placeholder }) {
             rangeColors={["#FD5B61"]}
             />
 
-            <div className="flex items-center border-b mb-4">
+            <div className="flex items-center border-b mb-4 ">
                 <h2 className="font-semibold text-2xl flex-grow ">Number of Guests:</h2>
 
                 <UsersIcon className="h-5"/>
                 <input type="number" value ={numberOfGuests} min={1} onChange = {(e) => setNumberOfGuests(e.target.value)}className="w-12 pl-2 text-lg outline-none text-red-400"/>
             </div>
 
-            <div className="flex">
-                <button onChange={resetInput} className="cursor-pointer flex-grow text-gray-500">Cancel</button>
+            <div className="flex bg-gray-700 bg-opacity-60">
+                <button onChange={resetInput} className="cursor-pointer flex-grow text-gray-500 ">Cancel</button>
                 <button onClick={search} className="flex-grow text-red-400">Search</button>
             </div>
         </div>
