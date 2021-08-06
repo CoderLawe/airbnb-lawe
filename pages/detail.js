@@ -63,7 +63,7 @@ function detail() {
                         <div className="flex space-x-2">
 
                             <div className="relative w-1/2  py-4">
-                                <Image src="https://cdn.pixabay.com/photo/2019/03/02/19/50/log-cabin-4030556_960_720.jpg" layout="fill" objectFit="cover"/>
+                                <Image src="https://cdn.pixabay.com/photo/2016/08/15/00/45/log-cabin-1594361_960_720.jpg" layout="fill" objectFit="cover"/>
                             </div>
 
                             <div className="relative w-1/2 h-64 py-4">
@@ -104,7 +104,7 @@ function detail() {
                         </div>
 
                         <div className="relative w-20 h-20 border-b" >
-                            <Image className="rounded-full" src="https://avatars.githubusercontent.com/u/52962217?v=4" layout="fill"  />
+                            <Image className="rounded-full hover:opacity-70" src="https://avatars.githubusercontent.com/u/52962217?v=4" layout="fill"  />
                         </div>
                     </div>
 
@@ -155,13 +155,50 @@ function detail() {
                     Tapendoi Log Cabin is simple yet extremely comfortable with all the comforts one would need for a break away. Piping hot showers, power, wifi, comfortable warm cosy beds and views to die for! Lie in bed or sit by the camp fire listening to animals night chorus. We are on the edge of a conservancy so this is a bush experience.
                     </p>
 
-                    <h3 className="border-b cursor-pointer font-bold">Show more</h3>
+                    <h3 className="border-b cursor-pointer font-bold pb-5">Show more</h3>
                 </div>
 
 
-                <div className="w-1/2">
-                    <div className=" shadow-lg">
-                        <h1>Hi</h1>
+                <div className="w-1/2 sticky">
+                    <div className="shadow-lg mx-9  flex-col space-y-3 rounded-2xl p-8">
+                        <div className="flex justify-between border-b">
+                            <h1 className="font-serif font-bold text-xl">$150/<span className="text-gray-600">night</span></h1>
+                           
+                            <div className="flex items-center space-x-2">
+                                <StarIcon className="h-5 text-red-400"/>
+                                 <h3 className="font-serif font-bold">4.9 stars <span className="text-gray-600 border-b">(14 reviews)</span></h3>
+                            </div>
+                        </div>
+
+                        <div className="flex space-x-5 justify-center ml-9">
+                            <div className="flex-col  px-auto justify-center rounded-2xl px-5">
+                                <h3 className="">Check in</h3>
+                                <input type="text" placeholder="Add date" className=" rounded-2xl focus:outline-none"/>
+                            </div>
+
+                            <div className="flex-col px-auto justify-center rounded-2xl px-5 border-b">
+                                <div className="mx-auto">
+                                    <h3 className="">Check in</h3>
+                                    <input type="text" placeholder="Add date" className="rounded-2xl focus:outline-none"/>
+                                </div>
+                                
+                            </div>
+
+                            
+                        </div>
+
+                        <div className="flex justify-center border-b py-2">
+                            <div className="flex-col">
+                                <h3 className="font-serif font-semibold">No of guests</h3>
+                                <input className="border rounded-2xl focus:outline-none p-2" type="number" placeholder="How many are you"/>
+                            </div>
+                        </div>
+
+                        <div className="flex justify-center">
+                        <button className="rounded-lg bg-red-400 text-white bg-red px-10 py-4 shadow-md font-bold my-3 hover:shadow-xl transform transition duration-200 active:scale-90"> Check availability</button>
+                        </div>
+
+
                     </div>
                 </div>
             </section>
