@@ -1,6 +1,6 @@
 module.exports = {
     images:{
-        domains:["links.papareact.com","cdn.suwalls.com","www.psdstack.com","pixabay.com","cdn.pixabay.com","thumbs.dreamstime.com"],
+        domains:["links.papareact.com","cdn.suwalls.com","www.psdstack.com","pixabay.com","cdn.pixabay.com","thumbs.dreamstime.com","avatars.githubusercontent.com"],
     },
 
     env:{
