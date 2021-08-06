@@ -6,7 +6,7 @@ function MediumCard({ img,title}) {
                 {/* Sized relative to parent container*/}
                 <Image src={img} layout="fill" className="rounded-2xl"/>
             </div>
-            <h3>{title}</h3>
+            <h3 className="font-serif">{title}</h3>
         </div>
     )
 }
