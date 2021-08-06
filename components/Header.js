@@ -108,7 +108,7 @@ function Header({ placeholder }) {
             rangeColors={["#FD5B61"]}
             />
 
-            <div className="flex items-center border-b mb-4 ">
+            <div className="flex items-center border-b mb-4 bg-white text-black">
                 <h2 className="font-semibold text-2xl flex-grow ">Number of Guests:</h2>
 
                 <UsersIcon className="h-5"/>
@@ -116,8 +116,8 @@ function Header({ placeholder }) {
             </div>
 
             <div className="flex bg-gray-700 bg-opacity-60">
-                <button onChange={resetInput} className="cursor-pointer flex-grow text-gray-500 ">Cancel</button>
-                <button onClick={search} className="flex-grow text-red-400">Search</button>
+                <button onChange={resetInput} className="cursor-pointer flex-grow text-gray-700 bg-red-400">Cancel</button>
+                <button onClick={search} className="flex-grow text-black bg-green-400">Search</button>
             </div>
         </div>
     )}

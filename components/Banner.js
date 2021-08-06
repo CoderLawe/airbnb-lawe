@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect"
 import Header from "./Header"
 function Banner() {
     return (
-        <div className="relative h-[300px] sm:-h[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]">
+        <div className="relative h-[400px] sm:-h[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]">
                 <Header />
 
             <Image src="https://cdn.pixabay.com/photo/2017/11/28/13/07/sunset-2983614_960_720.jpg"
