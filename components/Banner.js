@@ -18,7 +18,10 @@ function Banner() {
                         onInit ={(typewriter) =>{
                             typewriter
                             .typeString("Not sure where to go?...Perfect!")
-                            .pauseFor(5000)
+                            .pauseFor(2000)
+                            .deleteAll()
+                            .typeString("We've got just the place for you!")
+
                             .start()
                         }
                     }

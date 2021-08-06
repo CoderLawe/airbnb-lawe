@@ -35,7 +35,7 @@ function Header({ placeholder }) {
       }
 
       const resetInput = () =>{
-          setSearchInput("")
+          setSearchInput("");
       }
 
       const search = () =>{
