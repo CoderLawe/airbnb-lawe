@@ -20,8 +20,12 @@ function detail() {
                         <h3>4.3 <span className="text-sm font-light">(14 reviews)</span></h3>
                         
                         <div className="flex space-x-3">
-                            <EmojiHappyIcon className="h-6"/>
+                            <EmojiHappyIcon className="h-6 text-red-400"/>
                             <h3>superhost</h3>
+                        </div>
+
+                        <div className="">
+                            <p>Somewhere in Canada</p>
                         </div>
                     </div>
 

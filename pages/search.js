@@ -4,6 +4,8 @@ import { useRouter } from "next/dist/client/router"
 import { format } from "date-fns";
 import SearchCard from "../components/SearchCard";
 import Map from "../components/Map";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function Search({ searchResults}) {
     const router = useRouter();
@@ -14,7 +16,11 @@ function Search({ searchResults}) {
     const formattedEndDate = format( new Date(startDate), "dd MMMM yy")
     const range = `${formattedStartDate} - ${formattedEndDate}`
 
-   
+    useEffect(() => {
+        Aos.init({duration:2000})
+           
+        }, [])
+
     return (
         <div>
             <Header placeholder={`${location} |${range} |${numberOfGuests}}`}/>
@@ -31,9 +37,22 @@ function Search({ searchResults}) {
                             <p className="button">More Filters</p>
                         </div>
                     <div className="flex-col space-y-8">
-                        {searchResults.map(({title, img, description, location, star, price, total}) => (
-                            <SearchCard title={title} img={img} description={description} location={location} key={img} star={star} price={price} total={total}/>
-                        ))}
+                        <div>
+                            {searchResults.slice(0,1).map(({title, img, description, location, star, price, total}) => (
+                                <SearchCard  title={title} img={img} description={description} location={location} key={img} star={star} price={price} total={total}/>
+
+
+                            ))}
+                        </div>
+
+                        <div data-aos="zoom-in">
+                            {searchResults.slice(2).map(({title, img, description, location, star, price, total}) => (
+                                <SearchCard  title={title} img={img} description={description} location={location} key={img} star={star} price={price} total={total}/>
+
+
+                            ))}
+                        </div>
+                      
 
                     </div>
           

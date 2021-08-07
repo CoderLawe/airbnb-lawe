@@ -5,8 +5,13 @@ import SmallCard from '../components/SmallCard';
 import MediumCard from '../components/MediumCard';
 import LargeCard from '../components/LargeCard';
 import Footer from '../components/Footer';
- 
+import Aos from 'aos';
+import { useEffect } from 'react';
 export default function Home({ exploreData, cardData }) {
+  useEffect(() => {
+    Aos.init({duration:2000})
+       
+    }, [])
   return (
     <div className="">
       <Head>

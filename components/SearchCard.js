@@ -2,22 +2,27 @@ import Image from "next/image"
 import { HeartIcon } from "@heroicons/react/outline"
 import { StarIcon } from "@heroicons/react/solid"
 import Link from "next/link"
+import Aos from "aos"
 
+import { useEffect } from "react"
 
 function SearchCard({ img, title, description, location, star, price, total}) {
+
+    useEffect(() => {
+        Aos.init({duration:2000})
+           
+        }, [])
     return (
 
-        <div className="flex-col  shadow-lg  rounded-b-2xl">
+        <div className="flex-col  shadow-lg  rounded-t-2xl group rounded-b-2xl border-l-4  space-y-4 hover:bg-gray-100" >
             <div className="flex justify-center">
-                <div className="h-60 md:w-full  md:h-72 relative">
-                    <Link href="/detail">
+                <div className="h-60 md:w-full  md:h-72 relative mx-5 cursor-pointer mt-6 border-b-5 group-hover:border-red-400">
+                    <Link href="/detail" data-aos="zoom-in">
                                 <Image 
                                 src={img} 
                                 layout="fill"
                                 objectFit="cover"
-                                className="rounded-t-2xl rounded-b-lg mx-auto px-10"
-                                
-                                
+                                className="rounded-t-2xl rounded-b-lg mx-auto px-10  "
                                 />
                     </Link>
                 </div>
@@ -35,7 +40,7 @@ function SearchCard({ img, title, description, location, star, price, total}) {
 
             <div className="flex justify-center pt-5">
                 <Link href="/detail">
-                            <button className="rounded-2xl bg-black text-gray-300  px-10 py-4 shadow-md font-bold my-3 hover:shadow-xl hover:scale-105 transform transition duration-200 active:scale-90">More details</button>
+                            <button data-aos="zoom-in" className="rounded-2xl bg-black text-gray-300  px-10 py-4 shadow-md font-bold my-3 hover:shadow-xl hover:scale-105 transform transition duration-200 active:scale-90">More details</button>
                 </Link>
             </div>
 
