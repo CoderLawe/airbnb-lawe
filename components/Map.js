@@ -72,7 +72,7 @@ function Map({ searchResults}) {
                             closeOnClick={true}
                             latitude={result.lat}
                             longitude={result.long}
-                            className="rounded-2xl"
+                            className="rounded-2xl z-50"
                             >
                                 <div className="shadow-lg p-3 flex-col">
                                     <div className="flex justify-center">

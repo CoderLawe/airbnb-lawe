@@ -5,6 +5,8 @@ import Image from "next/image"
 
 function detail() {
     return (
+
+        // INSTALL AOS FOR SEARCH PAGE
         <div className="">
             <Header />
         <div className="mx-6 rounded-2xl shadow-lg mt-10 p-5">
@@ -53,7 +55,7 @@ function detail() {
 
                 {/* Left section */}
                 <div className="relative w-1/2 h-[535px] py-4">
-                    <Image className="rounded-l-2xl" src="https://cdn.pixabay.com/photo/2019/03/02/19/50/log-cabin-4030556_960_720.jpg" objectFit="cover" layout="fill"/>
+                    <Image className="rounded-l-2xl hover:opacity-75" src="https://cdn.pixabay.com/photo/2019/03/02/19/50/log-cabin-4030556_960_720.jpg" objectFit="cover" layout="fill"/>
                 </div>
 
                 {/* Right section */}
@@ -63,11 +65,11 @@ function detail() {
                         <div className="flex space-x-2">
 
                             <div className="relative w-1/2  py-4">
-                                <Image src="https://cdn.pixabay.com/photo/2016/08/15/00/45/log-cabin-1594361_960_720.jpg" layout="fill" objectFit="cover"/>
+                                <Image className="hover:opacity-75"src="https://cdn.pixabay.com/photo/2016/08/15/00/45/log-cabin-1594361_960_720.jpg" layout="fill" objectFit="cover"/>
                             </div>
 
                             <div className="relative w-1/2 h-64 py-4">
-                                <Image className="rounded-r-2xl" src="https://cdn.pixabay.com/photo/2017/02/05/19/41/rustic-2041017_960_720.jpg" layout="fill"/>
+                                <Image className="rounded-r-2xl hover:opacity-75" src="https://cdn.pixabay.com/photo/2017/02/05/19/41/rustic-2041017_960_720.jpg" layout="fill"/>
                             </div>
 
                         </div>
@@ -78,11 +80,11 @@ function detail() {
                         <div className="flex space-x-2">
 
                             <div className="relative w-1/2 h-64 py-4">
-                                <Image  src="https://cdn.pixabay.com/photo/2017/04/19/23/39/hdr-2244067_960_720.jpg" layout="fill"/>
+                                <Image className="hover:opacity-75" src="https://cdn.pixabay.com/photo/2017/04/19/23/39/hdr-2244067_960_720.jpg" layout="fill"/>
                             </div>
 
                             <div className="relative w-1/2 h-64 py-4">
-                                <Image className="rounded-r-2xl" src="https://cdn.pixabay.com/photo/2019/03/02/19/50/log-cabin-4030556_960_720.jpg" layout="fill"/>
+                                <Image className="rounded-r-2xl hover:opacity-75" src="https://cdn.pixabay.com/photo/2019/03/02/19/50/log-cabin-4030556_960_720.jpg" layout="fill"/>
                             </div>
 
                         </div>
