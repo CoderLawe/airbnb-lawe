@@ -9,14 +9,17 @@ function SearchCard({ img, title, description, location, star, price, total}) {
         <div className="flex py-7 px-2 pr-4 transition transform duration-200  ease-out cursor-pointer hover:opacity-80 hover:shadow-lg first:border-t group hover:border-r-4 border- ">
             {/* Read up on flex shrink */}
             <div className="relative  h-24 w-40  md:h-52 md:w-80  flex-shrink-0 rounded-2xl ">
-                <Image 
-                src={img} 
-                layout="fill"
-                objectFit="cover"
-                className="rounded-2xl"
-                
-                
-                />
+                <Link href="/detail">
+                    <Image 
+                    src={img} 
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-2xl"
+                    
+                    
+                    />
+                </Link>
+              
 
 
             </div>
@@ -43,7 +46,7 @@ function SearchCard({ img, title, description, location, star, price, total}) {
 
                 <div className="flex justify-center items-start">
                     <Link href="/detail">
-                        <button className="rounded-lg bg-red-400 text-white  px-10 py-4 shadow-md font-bold my-3 hover:shadow-xl transform transition duration-200 active:scale-90">More details</button>
+                        <button className="rounded-lg bg-red-400 text-white  px-10 py-4 shadow-md font-bold my-3 hover:shadow-xl hover:scale-105 transform transition duration-200 active:scale-90">More details</button>
                     </Link>
 
                 </div>

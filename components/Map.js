@@ -1,14 +1,18 @@
 import { useState } from "react";
 import ReactMapGl, {Marker, Popup} from "react-map-gl";
 import getCenter from "geolib/es/getCenter";
-import { ArrowDownIcon, PencilIcon } from "@heroicons/react/outline";
-import { ArrowUpIcon } from "@heroicons/react/solid";
+import Link from "next/link"
+import { ArrowDownIcon, GlobeIcon, PencilIcon } from "@heroicons/react/outline";
+import { ArrowUpIcon, BadgeCheckIcon, PhoneIcon } from "@heroicons/react/solid";
+import { useRouter } from "next/dist/client/router";
 import Image from "next/image";
+
 function Map({ searchResults}) {
 
     const [selectedLocation, setSelectedLocation] = useState({});
     // We need to transform the search results object into the specific one from the docs
 
+    const router = useRouter();
     // Mapping through to get a reference to the item
     const coordinates = searchResults.map((result) =>({
         // This'll return an object everytime it loops through
@@ -20,7 +24,9 @@ function Map({ searchResults}) {
 
     const center = getCenter(coordinates);
     
-
+    //  buttonPressed(e){
+    //     Router.push('/detail')
+    // }
 
     const [viewPort, setViewPort] = useState({
         width:"100%",
@@ -49,8 +55,9 @@ function Map({ searchResults}) {
                         <p  
                         // https://thumbs.dreamstime.com/b/hospital-bed-logo-bed-icon-dark-background-white-hospital-bed-logo-bed-icon-dark-background-133541157.jpg
                             role="img"
-                            className="cursor-pointer text-2xl animate-pulse text-red-500"
+                            className="cursor-pointer text-2xl animate-pulse transform transition duration-700 ease-in-out text-red-500"
                             onClick={() => setSelectedLocation(result)}
+                           
                             aria-label="push-pin"
                         >
 
@@ -65,9 +72,33 @@ function Map({ searchResults}) {
                             closeOnClick={true}
                             latitude={result.lat}
                             longitude={result.long}
+                            className="rounded-2xl"
                             >
-                                <div className="shadow-lg p-3">
-                                     {result.title}
+                                <div className="shadow-lg p-3 flex-col">
+                                    <div className="flex justify-center">
+                                        <p className="font-serif font-semibold border-b"> {result.title}</p>
+                                    </div>          
+
+                                    <div className="flex justify-center pt-3">
+                                        Only {result.price}
+                                    </div>
+
+                                    <div className="flex justify-center space-x-2 py-2">
+                                        <GlobeIcon className="h-8"/>     
+                                        <PhoneIcon className="h-8"/>                    
+                                        <BadgeCheckIcon className="h-8"/>                    
+               
+                                    </div>
+                                    <div className="flex justify-center py-2">
+                                            <button  onMouseDown={() => {
+                                router.push('/detail');
+                              }} className="text-sm bg-black p-2 text-white shadow-lg rounded-lg hover:scale-105 transform transition duration-200 ease-out">Learn more</button>
+
+
+                                        
+                                    </div>
+                     
+                          
                                 </div>
                             
                         </Popup>
