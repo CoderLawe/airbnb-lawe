@@ -39,8 +39,8 @@ function Search({ searchResults}) {
           
                     </section>
 
-                  <section className="hidden xl:inline-flex xl:min-w-[600px]">
-                      <Map searchResults={searchResults}/>
+                  <section className="hidden xl:inline-flex xl:min-w-[600px] shadow-xl rounded-2xl py-10">
+                      <Map className="rounded-2xl shadow-xl" searchResults={searchResults}/>
                   </section>
                 </main>
             <Footer />

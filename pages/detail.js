@@ -12,7 +12,7 @@ function detail() {
         <div className="mx-6 rounded-2xl shadow-lg mt-10 p-5">
             {/* Top section */}
             <div className="py-3">
-                <h3 className="text-2xl font-serif text-gray-700 font-bold py-3">TAPENDOI LODGE, NANYUKI KENYA</h3>
+                <h3 className="text-2xl font-serif text-gray-700 font-bold py-3">ENCHANTED ROCKIES LODGE, CANADA</h3>
 
                 <div className="flex justify-between">
                     <div className="flex space-x-3">
