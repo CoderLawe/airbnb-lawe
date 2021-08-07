@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { SearchIcon, SearchCircleIcon, GlobeIcon, GlobeAltIcon, UserIcon, MenuAlt1Icon, MenuIcon, UsersIcon } from "@heroicons/react/solid"
+import { SearchIcon, SearchCircleIcon, GlobeIcon, GlobeAltIcon, UserIcon, MenuAlt1Icon, MenuIcon, UsersIcon, ArrowCircleRightIcon } from "@heroicons/react/solid"
 import { useEffect, useState } from "react";
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
@@ -109,15 +109,18 @@ function Header({ placeholder }) {
             />
 
             <div className="flex items-center border-b mb-4 bg-white text-black">
-                <h2 className="font-semibold text-2xl flex-grow ">Number of Guests:</h2>
+                <h2 className="font-semibold text-2xl flex-grow p-5">Number of Guests:</h2>
 
                 <UsersIcon className="h-5"/>
                 <input type="number" value ={numberOfGuests} min={1} onChange = {(e) => setNumberOfGuests(e.target.value)}className="w-12 pl-2 text-lg outline-none text-red-400"/>
             </div>
 
-            <div className="flex space-x-2  bg-opacity-60 ">
-                <button onChange={resetInput} className="rounded-2xl cursor-pointer flex-grow text-gray-700 bg-red-400 ">Cancel</button>
-                <button onClick={search} className="flex-grow text-black bg-green-400 rounded-2xl">Search</button>
+            <div className="flex justify-between space-x-2  bg-opacity-60 ">
+                <button onChange={resetInput} className="rounded-2xl cursor-pointer w-1/2 hover:scale-105  transition transform duration-200 ease-out text-gray-700 bg-red-400 ">Cancel</button>
+                <div className="flex space-x-2 items-center w-1/2 h-10">
+                     <button onClick={search} className=" text-gray-300 w-full h-10 hover:scale-105  transition transform duration-200 ease-out bg-gray-800 shadow-lg rounded-2xl">Search</button>
+
+                </div>
             </div>
         </div>
     )}
