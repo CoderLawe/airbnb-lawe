@@ -61,7 +61,7 @@ function Map({ searchResults}) {
                             aria-label="push-pin"
                         >
 
-                            <img className="h-10 shadow-lg" objectFit="cover"  src="https://thumbs.dreamstime.com/b/hospital-bed-logo-bed-icon-dark-background-white-hospital-bed-logo-bed-icon-dark-background-133541157.jpg" layout="fill"/>
+                            <img className="h-10 shadow-lg" objectFit="cover"  src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_107127954_stock-vector-bed-icon-vector-isolated-on-white-background-bed-transparent-sign-line-and-outline-elements-in-linea.html&psig=AOvVaw2jhExw1gN6_Ac_-DRgBVyj&ust=1628489743911000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPCRpZvjoPICFQAAAAAdAAAAABAD" layout="fill"/>
                         </p>
                     </Marker>
                     {/* The popup that should show when we click on a marker */}
