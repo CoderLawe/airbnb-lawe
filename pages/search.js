@@ -37,21 +37,21 @@ function Search({ searchResults}) {
                             <p className="button">More Filters</p>
                         </div>
                     <div className="flex-col space-y-8">
-                        <div>
-                            {searchResults.slice(0,1).map(({title, img, description, location, star, price, total}) => (
-                                <SearchCard  title={title} img={img} description={description} location={location} key={img} star={star} price={price} total={total}/>
-
-
-                            ))}
-                        </div>
-
                         <div data-aos="zoom-in">
-                            {searchResults.slice(2).map(({title, img, description, location, star, price, total}) => (
+                            {searchResults.map(({title, img, description, location, star, price, total}) => (
                                 <SearchCard  title={title} img={img} description={description} location={location} key={img} star={star} price={price} total={total}/>
 
 
                             ))}
                         </div>
+
+                        {/* <div data-aos="fade-left">
+                            {searchResults.slice(1,2).map(({title, img, description, location, star, price, total}) => (
+                                <SearchCard  title={title} img={img} description={description} location={location} key={img} star={star} price={price} total={total}/>
+
+
+                            ))}
+                        </div> */}
                       
 
                     </div>

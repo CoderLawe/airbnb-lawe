@@ -2,6 +2,7 @@ import { StarIcon, UploadIcon, SparklesIco, CheckIcon } from "@heroicons/react/s
 import { HomeIcon, SparklesIcon,EmojiHappyIcon, HeartIcon } from "@heroicons/react/outline"
 import Header from "../components/Header"
 import Image from "next/image"
+import MediumCard from "../components/MediumCard"
 
 function detail() {
     return (
@@ -162,6 +163,21 @@ function detail() {
                     </p>
 
                     <h3 className="border-b cursor-pointer font-bold pb-5">Show more</h3>
+
+
+                    <div className="flex-col">
+                        <div className="flex justify-start">
+                            <h3 className="py-5 px-3 text-xl font-bold font-serif text-gray-500">Where you'll sleep</h3>
+                        </div>
+
+                        <div className="flex space-x-2 w-20  ">
+                           
+
+
+
+                        </div>
+
+                    </div>
                 </div>
 
 
