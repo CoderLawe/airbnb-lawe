@@ -6,7 +6,7 @@ function Banner() {
         <div className="relative h-[400px] sm:-h[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]">
                 <Header />
 
-            <Image src="https://cdn.pixabay.com/photo/2017/11/28/13/07/sunset-2983614_960_720.jpg"
+            <Image src="https://cdn.discordapp.com/attachments/817048198022430761/1202233058338537515/pexels-tobias-bjrkli-2756420.jpg?ex=65ccb5c9&is=65ba40c9&hm=ee3d1424019b9f56457e7d9949d3a2adee3291a1abe25a31ead428fa9fc9ada7&"
                     layout="fill"
                     objectFit="cover"
                 />
